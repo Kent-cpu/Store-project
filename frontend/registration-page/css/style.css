@@ -5,10 +5,15 @@
 
 body {
   font-size: 16px;
-  font-family: "Roboto";
+  font-family: "Comfortaa";
   background: url(../img/musical-instruments.jpg) 0 0/100% auto no-repeat;
 }
 
+input,
+button {
+  outline: none;
+  border: none;
+}
 .container {
   width: 500px;
   text-align: center;
@@ -24,24 +29,20 @@ body {
 
 .authorization-block input {
   width: 250px;
-
   border-radius: 5px;
   border: 1px solid #ccc;
-  outline: none;
   margin-bottom: 15px;
   padding: 10px;
-}
-
-.authorization-block input::placeholder {
-  font-size: 14px;
 }
 
 input[type="text"],
 input[type="password"] {
   font-size: 16px;
+  font-family: "Comfortaa";
 }
 
 .login-title {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 15px;
 }
 
@@ -52,11 +53,10 @@ input[type="password"] {
   margin-top: 18px;
   margin-bottom: 10px;
   border-radius: 3px;
-  border: none;
   font-size: 17px;
   background-color: #3b2fe9;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  font-family: "Comfortaa";
   color: #c3e1f8;
 }
 
@@ -68,5 +68,90 @@ input[type="password"] {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-style: italic;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-window {
+  width: 600px;
+  margin: 100px auto;
+  border-radius: 5px;
+  background: #fff;
+  height: 470px;
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.modal-body {
+  padding-top: 30px;
+}
+
+.modal-body form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.modal-body form p {
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+
+.vmodal {
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.9s, visibility 0s linear 0.3s;
+}
+
+.vmodal.open {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.vmodal input {
+  width: 300px;
+  padding: 5px 0px 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-footer button {
+  width: 200px;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: rgb(73, 255, 28);
+  font-size: 15px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-family: "Comfortaa";
 }
